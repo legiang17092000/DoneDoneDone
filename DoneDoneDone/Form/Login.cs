@@ -46,7 +46,7 @@ namespace DoneDoneDone
                 MessageBox.Show("Đăng nhập thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
                 this.Hide();// ẩn form chạy ngầm
                 FormAdmin form1 = new FormAdmin();
-                form1.ShowDialog(); 
+                form1.ShowDialog(); //dùng để mở lên và thao tác được
                 this.Close();// đóng form
                 
             }
