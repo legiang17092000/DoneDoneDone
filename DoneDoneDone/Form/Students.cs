@@ -120,14 +120,27 @@ namespace DoneDoneDone
         #region Cập nhật data   -Hàm update và btnSave
         private void UpdateData2()
         {
-            SqlParameter[] sqlParams = {
-                new SqlParameter("@IDStu",txtID.Text.Trim())
+
+            {
+                SqlParameter[] sqlParam1 = {
+                new SqlParameter("@IDStu",txtID.Text.Trim()),
+                new SqlParameter("@Ten", txtTen.Text.Trim()),
+                new SqlParameter("@GioiTinh",txtGioiTinh.Text.Trim()),
+                new SqlParameter("@SoCMND",txtCMNDsvsa.Text.Trim()),
+                new SqlParameter("@NgaySinh",txtNgaySinh.Text.Trim()),
+                new SqlParameter("@TaiKhoanEmail",txtEmail.Text.Trim()),
+                new SqlParameter("@SDT",txtSDT.Text.Trim()),
+                new SqlParameter("@IDClass",txtIDclass.Text.Trim())
             };
 
-            Libs.Database.Data.ExecuteNonQuery("HSCapNhatProfile", CommandType.StoredProcedure, sqlParams);
-            MessageBox.Show("Đã Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                Libs.Database.Data.ExecuteNonQuery("HSCapNhatProfile", CommandType.StoredProcedure, sqlParam1);
+                MessageBox.Show("Đã Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
 
-            DanhSach(); // Làm mới dữ liệu
+                //else MessageBox.Show("ID Student không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                DanhSach(); // Làm mới dữ liệu
+
+
+            }
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {

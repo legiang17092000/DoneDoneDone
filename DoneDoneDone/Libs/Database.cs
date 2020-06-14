@@ -50,7 +50,7 @@ namespace DoneDoneDone.Libs
         //Data Source =.; Initial Catalog = HELPDESK; Persist Security Info=True;User ID = helpdesk; Password=123456
 
         //Khai báo cấu hình kết nối cố định - lưu vào code
-        public SqlConnection con = new SqlConnection(@"Data Source=THE_J4;Initial Catalog=CSDL_QuanLyTTTA;Integrated Security=True");
+        public SqlConnection con = new SqlConnection("Data Source=NGUYENGIANG-IS;Initial Catalog=CSDL_QuanLyTTTA;Integrated Security=True");
 
         //Khai báo cấu hình kết nối từ file cấu hình Setting, dễ dàng khi đi mang đi cài đặt
         //public SqlConnection con = new SqlConnection(Properties.Settings.Default.ConnectionString);
