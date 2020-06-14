@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSDL_QuanLyTTTADataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSDL_QuanLyTTTADataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataConnection.cs" />
     <Compile Include="Form\AboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +96,6 @@
     <Compile Include="Form\Students.Designer.cs">
       <DependentUpon>Students.cs</DependentUpon>
     </Compile>
-    <Compile Include="tblTeacher.cs" />
-    <Compile Include="TeacherBLL.cs" />
-    <Compile Include="TeacherDAL.cs" />
     <EmbeddedResource Include="Form\AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,17 +127,6 @@
     <EmbeddedResource Include="Form\Teacher.resx">
       <DependentUpon>Teacher.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CSDL_QuanLyTTTADataSet.xsc">
-      <DependentUpon>CSDL_QuanLyTTTADataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CSDL_QuanLyTTTADataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CSDL_QuanLyTTTADataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CSDL_QuanLyTTTADataSet.xss">
-      <DependentUpon>CSDL_QuanLyTTTADataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

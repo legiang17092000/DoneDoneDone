@@ -14,11 +14,11 @@ namespace DoneDoneDone
 {
     public partial class FormTeacher : Form
     {
-        TeacherBLL bllTeacher;
+        
         public FormTeacher()
         {
             InitializeComponent();
-            bllTeacher = new TeacherBLL();
+            
         }
         DataTable dtTeacher;
         private void textBox4_TextChanged(object sender, EventArgs e)
