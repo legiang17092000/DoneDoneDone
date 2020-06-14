@@ -16,14 +16,14 @@ namespace DoneDoneDone
         {
             InitializeComponent();
         }
-        DataTable dtTeacher;
+        DataTable dtTeacher = new DataTable();
         private void FormAdmin_Load(object sender, EventArgs e)
         {
             DanhSach();
         }
         public void DanhSach()
         {
-            dtTeacher = new DataTable();
+            //dtTeacher = new DataTable();
             dtTeacher.Clear();//xóa dữ liệu cũ
             //lấy dữ liệu từ sql vô
             dtTeacher = Libs.Database.Data.ExcuteToDataTable("GVDanhSachGV", CommandType.StoredProcedure);

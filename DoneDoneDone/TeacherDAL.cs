@@ -32,13 +32,19 @@ namespace DoneDoneDone
             //conn.Open();
             //cmd = new SqlCommand("GVDanhSachGV");
             //cmd.Connection = conn;
+
             ////B1: Tao cau lenh SQL
+            ///
             ////string sql = "select*form tblTeacher";
+            ///
             ////B2: Tao ket noi den sql
+            ///
             ////SqlConnection conn = new SqlConnection("Data Source=NGUYENGIANG-IS;Initial Catalog=CSDL_QuanLyTTTA;Integrated Security=True");
             ////SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings[""].ConnectionString);
+            ///
             ////B3: Khoi tao doi tuong DataAdapter
             //da = new SqlDataAdapter(cmd);
+
             ////B4: Mo ket noi
             ////
             ////B5: Do du lieu tu sqlDataAdapter vao DataTable
