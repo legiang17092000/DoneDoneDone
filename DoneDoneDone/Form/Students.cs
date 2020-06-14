@@ -18,7 +18,7 @@ namespace DoneDoneDone
             InitializeComponent();
         }
 
-        bool _isNew = true;
+        bool _isNew = true; //chưa dùng nó đâu
         DataTable dtStudent = new DataTable();
 
         private void FormStudents_Load(object sender, EventArgs e)
@@ -38,30 +38,7 @@ namespace DoneDoneDone
         }
 
 
-        /*public void StudentInsert()
-        {
-            SqlParameter[] sqlParams = {
-                new SqlParameter("@IDStu",txtID.Text.Trim() ),
-                new SqlParameter("@Ten", txtTen.Text.Trim()),
-                new SqlParameter("@GioiTinh",txtGioiTinh.Text.Trim()),
-                new SqlParameter("@SoCMND",txtCMNDsvsa.Text.Trim()),
-                new SqlParameter("@NgaySinh",txtNgaySinh.Text.Trim()),
-                new SqlParameter("@TaiKhoanEmail",txtEmail.Text.Trim()),
-                new SqlParameter("@SDT",txtSDT.Text.Trim()),
-                new SqlParameter("@IDClass",txtIDclass.Text.Trim())
-
-            };
-            Libs.Database.Data.ExecuteNonQuery("HSThemMoi", CommandType.StoredProcedure, sqlParams);
-            MessageBox.Show("Add new student succesfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            StudentInsert();
-            DanhSach();
-        }*/
-
-        #region Show Data
+        #region Show Data vào textbox
         private void dgvStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _isNew = false;
@@ -82,8 +59,7 @@ namespace DoneDoneDone
         #region Xóa hàng (hàm DeleteData và btnDelete)
         private void DeleteData()
         {
-            if (_isNew == false)
-            {
+            
                 //Bước 1: Tạo Parameter cần thiết
                 SqlParameter[] sqlParams = {
                          new SqlParameter("@IDStu",txtID.Text.Trim())};
@@ -91,11 +67,7 @@ namespace DoneDoneDone
                 Libs.Database.Data.ExecuteNonQuery("HSXoaHocSinh", CommandType.StoredProcedure, sqlParams);
                 MessageBox.Show("Xóa dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
                 DanhSach(); // Làm mới dữ liệu
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một yêu cầu cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
-            }
+            
         }
         private void btnDeleta_Click_1(object sender, EventArgs e)
         {
@@ -105,7 +77,7 @@ namespace DoneDoneDone
         #endregion
 
         private void btnAdd_Click(object sender, EventArgs e)
-        {
+        {//cái này là làm trống txt
             txtTen.Text = "";
             txtID.Text = "";
             txtGioiTinh.Text = "";
@@ -117,7 +89,7 @@ namespace DoneDoneDone
             _isNew = true;
         }
 
-        #region Cập nhật data (thêm mới và cập nhật)  -Hàm update và btnSave
+        #region thêm mới data   -Hàm update và btnSave
         private void UpdateData()
         {
             SqlParameter[] sqlParams = {
@@ -145,10 +117,7 @@ namespace DoneDoneDone
         #endregion
 
 
-
-
-
-        #region Cập nhật data (thêm mới và cập nhật)  -Hàm update và btnSave
+        #region Cập nhật data   -Hàm update và btnSave
         private void UpdateData2()
         {
             SqlParameter[] sqlParams = {
